@@ -1,0 +1,31 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shiro?useUnicode=true&characterEncoding=utf8&SSL=false
+    username: root
+    password: 520097
+  jpa:
+    database: MYSQL
+    show-sql: true
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    hibernate:
+      naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+  mail:
+    host: smtp.qq.com
+    username: 824238833@qq.com
+    password: zuemmqcwlzlhbbci
+    properties:
+      mail:
+        smtp:
+          auth: true
+        starttls:
+          enable: true
+          required: true
+    default-encoding: UTF-8
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.qf.domain.pojo
+
